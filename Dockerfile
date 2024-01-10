@@ -11,4 +11,7 @@ RUN yum install -y sudo && \
     unzip BrowserStackLocal-linux-x64.zip && \
     mv ./BrowserStackLocal /usr/local/bin/BrowserStackLocal && \
     chmod +x /usr/local/bin/BrowserStackLocal && \
-    pip install virtualenv
+    pip install virtualenv && \
+    rpm -Uvh https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm  && \
+    rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022 && \
+    yum install -y mysql-community-server 
